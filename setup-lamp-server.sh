@@ -100,20 +100,6 @@ a2enmod proxy
 a2enmod proxy_fcgi
 
 
-
-# Getting the apache config value
-
-APACHE_CONFIG_CHECK=$(apachectl configtest)
-
-
-# Checking if apache configuration is ok 
-
-if [[ APACHE_CONFIG_CHECK != "OK" ]]; then
-	echo "This script encountered an error with apache configuration"
-	exit -1
-fi
-
-
 # Restart apache server
 
 systemctl restart apache2
