@@ -1,0 +1,147 @@
+Shell Scripting Interview Questions for Beginners
+Let’s get started with some shell scripting interview questions for beginners. 
+
+1. What is a superblock in shell scripting?
+A superblock is a program containing specific file systems' records. The characteristics available in the block are size, counts of filled and empty blocks, usage information, size of block groups, and location and size of inode tables. 
+
+2. What do you understand by a shell?
+Shell is a command-line interpreter that translates user-entered commands into kernel understandable language. The shell interprets the command typed in at the terminal and calls the required program. 
+
+3. Name commonly used shells on a typical Linux system.
+There are mainly two kinds of Linux shells- C-shell and Bourne shell. Their derivatives are as follows:
+
+C-shell: TENEX C-Shell, Z-Shell
+Bourne shell: Korn Shell, POSIX Shell, Bourne-Again Shell
+
+
+4. Tell about the four stages of the Linux Process.
+The four stages include: 
+
+Waiting- The Linux process is waiting for the resource
+Running- The Linux process is currently running
+Stopped- The Linux process has been stopped after successful execution
+Zombie- The Linux process is still active in the process table, but it has stopped. 
+5. How can you connect to a database server?
+To connect to a database server from Linux, use the isql utility that comes with the open client driver. Here is how:
+
+isql –S serverName –U username –P password
+
+6. Give the purpose of the shebang line.
+The shebang line is at the top of each script used to determine the engine's location and is used to execute the script. 
+
+7. Define Shell Variable.
+Shell variable forms the core part of a shell script or program. The variable allows the shell to manipulate the stored information within a shell program. It is generally stored as a string variable. 
+
+8. How many kernels and shells are available in the UNIX environment?
+There can be multiple shells available, but there is only one kernel in the UNIX environment. 
+
+9. What is the alternative command for echo?
+The alternative command for echo is tput. This command allows us to control how the output is displayed on the screen. 
+
+10. What is a metacharacter?
+Metacharacter is a unique character included in a program or data field of a shell. It offers information about other characters. For example: to list all files beginning with character 's,' use the 'ls s*' command. 
+
+Shell Scripting Interview Questions for the Intermediate
+Here are some intermediate level shell scripting interview questions!
+
+1. Tell us about the disadvantages of shell scripting.
+Shell scripting has the following disadvantages:
+
+The process is slow initially and improves gradually
+Portability is not easy
+Typing errors can partition as well as delete entire data
+Weak designs can prove to be costly and can destroy the whole process. 
+2. What do you understand by GUI scripting?
+GUI or Graphical User Interface controls a computer and its applications. GUI scripting mostly depends on the operating system and supports different applications. 
+
+3. Tell us about the ‘$#’ use in shell scripting.
+'$#' is used to display the total number of passed arguments to the script. 
+
+4. Name standard streams in Linux.
+The standard streams in Linux are Standard Input, Standard Output, and Standard Error. 
+
+5. Explain Crontab.
+Crontab means cron table because the tasks are executed using the job scheduler ‘cron.' It is a list of commands that run on a regular schedule, and the name of the command also manages the list. Crontab is the schedule and also the name of the program used to edit the schedule. 
+
+6. Differentiate between $@ and $*.
+$* considers an entire set of positional arguments as a single string whereas, $@ treats each quote argument as a separate argument.  
+
+7. What is the lifespan of a shell variable?
+A variable is inside the shell script only until the end of execution. 
+
+8. Tell us how you can compare strings in a shell script.
+To compare the text strings, we use the ‘test’ command. This command compares text strings by comparing each character of each string. 
+
+9. When the script is running in the UNIX, can you pass arguments to it?
+Yes, arguments can be passed, and it is a commonly followed practice. It is carried out to ensure the system does not have an error in executing commands and scripts run smoothly. 
+
+10. Can you separate hard and soft links in shell scripting? How?
+Shell scripting is a powerful approach that uses links to create shortcuts, just like Windows. Soft links do not have any specific location and can be anywhere on the same file system, and are generally related to the file name. At the same time, hard links remain present on the same file system. Hard links are related to nodes and have a particular fixed location in most cases. 
+
+
+Advanced Shell Scripting Interview Questions for the Experienced
+Here are some shell scripting interview questions for the experienced candidates!
+
+1. Name two files of the crontab command. 
+The two crontab command files are:
+
+cron. deny- decides the user that needs to be prevented from using crontab command
+cron. allow- decides the user that needs to be permitted to use the crontab command
+2. How will you debug problems encountered in the shell program?
+Some standard methods of debugging the problems in the script are:
+
+use of set-x to enable debugging
+Insert debug statements in a shell script to display information that helps in the identification of the problem. 
+3. What will be the status of a process executed using the exec command in the shell?
+All the new forked processes get overlays on executing exec. The command gets executed without any impact on the current process, and no new process is created in the scenario. 
+
+4. Why is bash a weakly typed language?
+Bash is a weakly typed language because it does not require declaring data type at the time of variable declaration. Bash variables are treated as strings, and the type of variable is set based on the current value. Bash variables can be defined by using declare command. However, to define data types, options are limited and do not support all data types. For example: declare command cannot be used for the float data type. 
+
+5. What is the alternative to if-else if-else statements in bash?
+An alternative to if-else if-else statement is a case statement. Its syntax is different from switch case. 'case' block is closed by 'esac,' and no break statement is used. Syntax
+
+case  in
+
+Match pattern one) commands;;
+
+Match pattern two) commands;;
+
+esac
+
+6. How can you print a substring in bash?
+Bash does not have a built-in function like other languages. However, a parameter expansion can be used to cut any string value. The three parts defined in parameter expansion are the primary string variable that has to be cut, starting position, and length of the cutting string. The first two are mandatory; the last one is optional. The starting position is counted from 0, and length must be counted from 1 of the main string. 
+
+7. Please tell us how you will check if a file exists on the filesystem.
+Using the following:
+
+if [ -f /var/log/messages ]
+
+then
+
+echo "File exists."
+
+fi
+
+8. Use the echo command to get part of a string variable. 
+This is how we can get part of string variable using echo command only: 
+
+echo ${variable:x:y}
+
+Where X is the starting position and y is the string length. 
+
+example:
+
+variable="Her name is Jen, and she is a developer."
+
+echo ${variable:12:6} # will display Jen
+
+9. What is the difference between [[ $string == "efg*" ]] and [[ $string == efg* ]] ?
+[[ $string == efg* ]] – checks if string begins with efg. 
+
+[[ $string == "efg*" ]] – checks if string is efg. 
+
+10. In what ways, shell script get input values?
+a. By reading command: read -p "Destination backup Server: " dest host
+
+b. By parameters: ./script param1 param2
