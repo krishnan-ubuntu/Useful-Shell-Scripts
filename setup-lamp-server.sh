@@ -108,5 +108,3 @@ systemctl restart apache2
 # shutdown the server and exit without error
 
 shutdown now;exit
-
-
