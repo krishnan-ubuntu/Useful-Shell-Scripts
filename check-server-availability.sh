@@ -5,11 +5,12 @@
 TARGET=''
 
 
-until [[  -n $TARGET ]]
+until [[  -n $TARGET && $TARGET =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]
 do
 	echo "Please enter the server public IP"
 	read TARGET
-	if [[ $TARGET != '' ]]; then
+
+	if [[ $TARGET != '' && $TARGET =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
 		echo -e "\nChecking....\n"
 
 		# -I to show document info only and not fetch the page details
@@ -20,5 +21,7 @@ do
 		else
 		  echo -e "\n$TARGET is down\n"
 		fi
+	else 
+		echo -e '\nWrong or empty input\n'
 	fi
 done
